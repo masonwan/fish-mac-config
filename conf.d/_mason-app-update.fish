@@ -3,8 +3,9 @@ function app-update -d 'Update with Homebrew and Nodejs'
 
   if type -q yarn > /dev/null
     yarn global upgrade
-  else
-    log warn 'Could not find yarn, upgrade modules with npm instead.'
+  end
+
+  if type -q node > /dev/null
     npm -g update
   end
 
