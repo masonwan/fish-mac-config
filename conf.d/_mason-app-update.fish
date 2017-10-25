@@ -6,6 +6,7 @@ function app-update -d 'Update with Homebrew and Nodejs'
   end
 
   if type -q node > /dev/null
+    npm -g install npm
     npm -g update
   end
 
